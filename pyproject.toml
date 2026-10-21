@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qiskit-compiler-contribution-lab"
+version = "0.1.0"
+description = "Independent, test-driven exercises for learning quantum compiler contribution workflows."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+dependencies = ["qiskit==2.6.0", "pytest>=8.4,<10", "cloudpickle>=3.1,<4"]
+
+[project.scripts]
+qclab = "qclab.cli:main"
+
+[dependency-groups]
+dev = ["ruff>=0.14,<1", "nbclient>=0.10,<1", "nbformat>=5.10,<6", "ipykernel>=6.30,<8"]
+notebooks = ["jupyterlab>=4.4,<5"]
+
+[tool.uv]
+default-groups = ["dev", "notebooks"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qclab"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

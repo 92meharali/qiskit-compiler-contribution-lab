@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+dist/
+*.egg-info/
+tmp/
+.DS_Store
+.ipynb_checkpoints/
+
+# Local grant preparation and human-session materials: not public teaching source.
+/docs/grant-*.md
+/docs/pilot*.md
+/docs/validation.md
+/docs/testing-boundaries.md
+/mehar_microgrant_strategy.md
+/unitary_foundation_microgrant_2026_official_research.md
+/output/
+/scripts/build_pilot_report.py
+
+# Never publish local credentials or private session archives.
+.env
+.env.*
+*.pem
+*.key
+/private-pilot*/
+/*.zip
