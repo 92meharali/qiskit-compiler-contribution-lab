@@ -70,9 +70,10 @@ Folder in WSL**. Check the WSL indicator, then select the WSL project's `.venv`
 using the notebook kernel picker. The notebook path should be a Linux path, not
 a Windows Python executable. See the [official WSL guide](https://code.visualstudio.com/docs/remote/wsl).
 
-These instructions have been checked against official documentation. This revision
-has not yet been independently executed on Windows or WSL by the agent; record
-fresh-learner setup results separately from the previous pilot notes.
+These instructions have been checked against official documentation. Hosted-runner
+CI passes on Windows, Linux, and macOS; see the [verification record](verification.md).
+Interactive Windows/WSL and VS Code kernel selection have not been independently
+tested by the agent. Record real learner setup results separately from CI.
 
 ## 3. Fix the environment before editing the exercise
 

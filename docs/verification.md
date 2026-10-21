@@ -13,9 +13,19 @@ record is retained locally; this public document contains software results only.
 The local publication check on 22 October 2026 passed all 34 project tests in
 49.45 seconds, both references (26 + 14 checks), and Ruff lint/format checks.
 Publication changes exclude private records and replace notebook links to private
-documents with the public facilitator guide. GitHub CI is configured for Linux,
-macOS, and Windows; its first remote run is pending. Only completed checks will be
-recorded as passing.
+documents with the public facilitator guide. The six notebook execution paths
+also passed again after those link edits (8.08 seconds locally).
+
+## GitHub CI
+
+The [first public CI run](https://github.com/92meharali/qiskit-compiler-contribution-lab/actions/runs/39687908140)
+completed successfully on Linux, macOS, and Windows for commit
+`fc5e466fdc92273a034c362ce977bf4effe2aa63` on 22 October 2026 (Asia/Karachi).
+Each job ran locked installation, environment diagnostics, both reference checks,
+the project tests, and Ruff lint/format checks. This is hosted-runner verification,
+not proof that every learner's interactive setup works. See the
+[live workflow history](https://github.com/92meharali/qiskit-compiler-contribution-lab/actions/workflows/ci.yml)
+for later commits rather than assuming their results from this snapshot.
 
 ## Reproduce
 
