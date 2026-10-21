@@ -4,7 +4,7 @@ A practical path from writing quantum circuits to contributing to a quantum
 compiler: understand the representation, write passes, test correctness, diagnose
 regressions, and explain changes for review.
 
-This is an independent project by Mehar Ali, built with AI assistance. It is not
+This is an independent project by Mehar Ali. It is not
 affiliated with or endorsed by IBM, Qiskit, or Unitary Foundation.
 
 **Teaching material version:** `pilot-revision-1-2026-10-22`. This public prototype
