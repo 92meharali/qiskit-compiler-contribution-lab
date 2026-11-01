@@ -6,6 +6,21 @@ intended learner knows Python functions/classes and basic quantum circuits but
 has not contributed to Qiskit. The goal is to help them move toward a first useful
 contribution, not generate PR volume or claim that finishing a notebook is enough.
 
+## Specialist reviewer profile
+
+For a focused technical review, we seek a current Qiskit maintainer or active
+contributor with recent synthesis or transpiler work and demonstrated experience
+with Python/Rust integration, source builds and regression tests. Relevant upstream
+work matters more than a particular team title. The reviewer should be independent
+of the teaching material's authorship; no specialist reviewer is appointed yet.
+
+The review should check the source map and Python/Rust boundary against the pinned
+historical case, and check development instructions against the relevant source
+revision and [Qiskit's contribution guidance](https://github.com/Qiskit/qiskit/blob/main/CONTRIBUTING.md).
+Record concrete findings and unresolved gaps, not an endorsement or certification.
+The future source-development companion is not implemented yet; assess it only
+when available. This profile does not restrict general learner or educator feedback.
+
 ## What to inspect
 
 Start with the [README](../README.md), then the
