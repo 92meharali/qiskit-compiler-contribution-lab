@@ -4,10 +4,11 @@ Guided practice for developers preparing a first useful Qiskit contribution:
 understand the contribution workflow, find implementation and tests, reproduce
 behavior, and explain a bounded change for human review.
 
-Independent material by Mehar Ali; not affiliated with or endorsed
-by IBM, Qiskit, or Unitary Foundation. The current prototype contains **one
-contribution-workflow walkthrough and two optional Python foundation labs**,
-not a complete compiler/Rust training course.
+This is an independent project by Mehar Ali. It is not
+affiliated with or endorsed by IBM, Qiskit, or Unitary Foundation.
+
+The current prototype contains **one contribution-workflow walkthrough and two
+optional Python foundation labs**, not a complete compiler/Rust training course.
 
 ## Start with the contribution workflow
 
