@@ -1,6 +1,6 @@
 # Setup checklist — choose the project kernel
 
-Material version: **pilot-revision-1-2026-10-22**. Start here if an import fails
+Material version: **contribution-workflow-r1-2026-11-01**. Start here if an import fails
 or the notebook seems to be using the wrong Python.
 
 ## 1. Start in the right folder
@@ -16,7 +16,7 @@ Then run these commands in order:
 uv sync --locked
 uv run qclab doctor
 uv run python -c "import sys; print(sys.executable)"
-uv run jupyter lab notebooks/01-circuit-dag.ipynb
+uv run jupyter lab notebooks/00-contribution-workflow.ipynb
 ```
 
 The project's default dependency groups already include JupyterLab and ipykernel.
@@ -24,13 +24,15 @@ No additional group flag is needed. Use `uv run python`, even if `python` alone 
 not on your PATH. Doctor should report Qiskit 2.6.0 and a successful circuit/DAG
 round trip. Record installation errors before attempting the exercise.
 
-To start Lab 02, use the same steps with `notebooks/02-analysis-pass.ipynb` in the
-last command. Initial setup needs internet; running the labs needs no hardware
+To start a foundation lab, use `notebooks/01-circuit-dag.ipynb` or
+`notebooks/02-analysis-pass.ipynb` in the last command. Initial setup needs internet;
+running the notebooks needs no hardware
 account. Keep the server terminal open while using JupyterLab.
 
 ## 2. Confirm the notebook's actual interpreter
 
-Each learner notebook now prints `sys.executable` **before** importing Qiskit.
+The foundation notebooks print `sys.executable` before importing Qiskit. In the
+workflow notebook, run `print(sys.executable)` in its environment cell as needed.
 Compare that path with the terminal command above. Both should belong to the
 same project environment, not system Python or an earlier extracted copy.
 
@@ -97,6 +99,19 @@ before sharing screenshots or logs. Do not share the Jupyter server's access tok
 2. **Clean notebook run:** save, restart the kernel, and run every cell in order.
    Does the entire notebook complete, including your own regression?
 
-A passing checker does not prove a clean notebook run. The unfinished starter may
+A passing checker does not prove a clean notebook run. These checker statuses
+apply to foundation Labs 01–02; the workflow notebook deliberately leaves human
+review pending and has no automated readiness grade. The unfinished starter may
 run end-to-end successfully while reporting `NOT YET`; completed work should report
 `PASS`. Restart an existing kernel after syncing changed dependencies.
+
+## 5. Keep historical reproduction and upstream builds separate
+
+The [case guide](contribution-case.md) runs old/fixed Qiskit wheels in separate
+uv-managed environments. It does not change this project's lockfile or `.venv`.
+Do not install the old wheel into the notebook kernel. The historical comparison
+was locally checked; it is not part of the existing three-platform hosted run.
+
+For actual edits to Qiskit, follow its current source-build instructions in a
+separate checkout. Python, Rust tooling, rebuild steps, and upstream checks differ
+from this released-wheel teaching setup. No successful source build is claimed here.

@@ -1,5 +1,10 @@
 # Facilitating the two-lab prototype
 
+This protocol remains specific to optional foundation Labs 01–02. For the new
+contribution-first walkthrough, use the separate
+[one-learner protocol](contribution-walkthrough-pilot.md). Do not transfer earlier
+foundation outcomes to the new activity.
+
 This is a reusable observation protocol, not a report of completed sessions.
 Keep participant-level records private; the public repository contains only
 blank templates and teaching source. For a short technical review instead, use

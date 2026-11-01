@@ -1,51 +1,61 @@
-# Curriculum: from circuit reader to compiler contributor
+# Roadmap: contribution practice before specialization
 
-**Scope decision, 22 October 2026:** a general pathway through Qiskit compiler
-development. No lesson requires familiarity with the author's pull requests.
-Past contributions are optional examples. The current implementation delivers
-Labs 01 and 02; Labs 03-06 below are planned, not completed or validated.
+Updated 1 November 2026. This is an independent learning project for Python
+developers with basic circuit knowledge who are new to Qiskit contributions.
+The purpose remains a first useful contribution; no upstream acceptance is promised.
 
-The course assumes Python and basic circuit literacy. The first release uses
-Qiskit to make the learning concrete. Concepts such as intermediate
-representations, compiler passes, invariants, regression tests, and review transfer
-to other systems; multi-framework support is a possible later extension.
+## Current entry point
 
-| Lab | Learner outcome | Practical artifact | Status |
-|---|---|---|---|
-| 01: Read and query a circuit DAG | Separate wires, operation nodes, selection, and traversal order | A tested operation-selection helper | Implemented; see software verification and limitations |
-| 02: Analyze without changing | Write an `AnalysisPass`, report useful circuit properties, and preserve the circuit | A top-level operation inventory consumed through a pass manager | Implemented; see software verification and limitations |
-| 03: Transform with explicit preconditions | Write a narrow `TransformationPass`, preserve wires and metadata, avoid invalid rewrites | A conservative circuit rewrite on a stated subset | Planned |
-| 04: Test correctness and its limits | Check unitary equivalence, account for global phase, and state the limits of matrix simulation | Positive and negative correctness tests on small circuits | Planned |
-| 05: Reproduce and fix a regression | Minimize a failing circuit, specify behavior, protect compatibility, and avoid misleading benchmarks | A regression test and repair in a practice repository | Planned |
-| 06: Prepare a contribution for review | Navigate source, build locally, read project policy, explain a patch, and respond to feedback | A human-written practice review plus an optional maintainer-approved real issue | Planned |
+| Stage | Practice artifact | Current status |
+|---|---|---|
+| Contribution expectations | Learner-written checklist using the official guide | Prompts implemented in the workflow notebook |
+| Repository navigation | Public API, implementation, tests, and Python/Rust source map | One pinned historical case implemented |
+| Reproduction and regression | Old/fixed observations and a justified local regression | Wheel comparison and reference checks implemented |
+| Human review | Explanation, limits, assistance record, and next preparation | Template and protocol ready; no learner review outcome claimed |
 
-Each lab should use a learner `.ipynb` and a separate instructor `.ipynb`, including
-a runnable starter, a visible behavior contract, progressive hints, shared automated
-checks, and an explanation task. Run notebooks in a clean kernel in CI to detect
-hidden execution-order dependencies. Keep reusable checker logic in Python modules.
-Fixtures should include realistic edge cases, not just an attractive demo.
+Start at the [workflow notebook](../notebooks/00-contribution-workflow.ipynb).
+The [QDrift case](contribution-case.md) is a resolved Python synthesis bug with a
+later Rust integration boundary to inspect. It is not a transpiler-pass exercise,
+a new upstream issue, or evidence of Rust development proficiency. We link to
+Qiskit's contribution rules rather than creating competing policy.
 
-Labs 01 and 02 form the current software prototype. Pilot Lab 01 first, then offer
-Lab 02 as a follow-on once learners can explain the first exercise. Before further
-curriculum expansion, validate setup, independent problem-solving, and learners'
-ability to explain the boundaries without the reference.
+## Retain, pause, and defer
 
-## Questions for external review
+- **Retain:** Labs 01–02, their learner/instructor notebook pairs, public checks,
+  and explanations as optional Python DAG/analysis-pass foundations. Their
+  earlier observations cannot be transferred to the new walkthrough.
+- **Pause:** the previously proposed Lab 03 transformation and Lab 04 correctness
+  sequence pending evaluation of the contribution-first direction. Neither is
+  implemented. Do not treat four workflow stages as four completed or promised labs.
+- **Defer:** full Rust instruction, production optimizer development, broader
+  regression/mentoring courses, and multiple framework support. The former
+  Labs 05–06 remain unimplemented, not funded commitments.
 
-- Does this bridge a gap beyond Qiskit's existing tutorials and contribution guide?
-- Is compiler contribution the right starting point for intermediate Python users?
-- Which lab outcomes do maintainers think would reduce their review burden?
-- Can learners install the pinned environment on their own laptops?
-- What learning benefit remains when the reference is openly available?
+## Evaluation gate for each material revision
 
-These remain research questions, not established benefits. The
-[reviewer guide](reviewer-guide.md) asks for specific feedback on accuracy and
-the contribution pathway. No maintainer endorsement or causal learning gain is
-claimed. Software checks and their limits are recorded in
-[verification.md](verification.md); human-session records are not public here.
+Use the [blank protocol](contribution-walkthrough-pilot.md) with one consenting
+learner. Freeze the material version, run the historical comparison beforehand,
+and record setup separately from learning. Assess the policy checklist, source
+map, reproduction, regression rationale, and follow-up explanation. Check prior
+question exposure and record initial answers separately from hints. Record assistance,
+reference exposure, and unfinished work; do not manufacture a successful PR.
 
-The next proposed milestone is four labs in total and a bounded guided
-first-contribution handoff using the existing upstream and practice-review
-guides. It does not promise the full Labs 05-06 above. Local practice artifacts
-and actual upstream contribution stages should be reported separately; helping
-first-time contributors remains the pathway's purpose.
+Retain or narrow the approach based on the observed packet and blockers. A
+single attempt is a usability check, not proof of causal gains or contribution
+readiness. Ask an experienced contributor whether the practice is relevant and
+what prerequisites are missing; no response or continuing support is assumed.
+
+After that gate, re-estimate deliverables and workload before revising a grant
+proposal. Implementation of this prototype does not itself approve a new grant
+scope or budget. Any work completed before application must be described as the
+baseline rather than future funded work.
+
+## Release and review boundaries
+
+Keep execution checks separate from human outcomes. Source checkout builds,
+Rust edits, full upstream test runs, and live issue suitability are additional
+work not established by wheel tests. Recheck
+[Qiskit's current contribution guide](https://github.com/Qiskit/qiskit/blob/main/CONTRIBUTING.md)
+before real work. Do not submit practice solutions, duplicate resolved fixes,
+or use PR volume as success. The [reviewer guide](reviewer-guide.md) asks for
+specific findings, not endorsements.

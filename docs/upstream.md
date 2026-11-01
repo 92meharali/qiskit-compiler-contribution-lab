@@ -1,5 +1,10 @@
 # Moving from practice to an upstream contribution
 
+Start with the [contribution workflow](contribution-workflow.md) and its
+[historical case notebook](../notebooks/00-contribution-workflow.ipynb). The case
+is already resolved and must not be submitted again. This page describes the
+additional steps for a genuinely new, useful task.
+
 This project teaches general contribution skills. Passing the lab does not mean a
 learner is ready to submit compiler code. Source builds, repository conventions,
 domain knowledge, and review are additional work.
@@ -15,7 +20,7 @@ domain knowledge, and review are additional work.
 
 ## AI assistance and human ownership
 
-As checked on 22 October 2026, Qiskit's guide requires human-driven submissions and
+As checked on 1 November 2026, Qiskit's guide requires human-driven submissions and
 communications, understanding of the submitted code, and disclosure of substantial
 AI assistance. It also prohibits generative content for issues labelled
 `good first issue`. Read the current policy before choosing a task, because policy

@@ -1,13 +1,18 @@
 # Focused review: does this help a first-time Qiskit contributor?
 
-This is an independent two-lab prototype, not an official Qiskit course. The
+This is an independent contribution-workflow prototype with two optional Python
+foundation labs, not an official Qiskit course. The
 intended learner knows Python functions/classes and basic quantum circuits but
 has not contributed to Qiskit. The goal is to help them move toward a first useful
 contribution, not generate PR volume or claim that finishing a notebook is enough.
 
 ## What to inspect
 
-Start with the [README](../README.md), then choose one learner notebook:
+Start with the [README](../README.md), then the
+[contribution-workflow notebook](../notebooks/00-contribution-workflow.ipynb).
+It applies contribution rules, reproduces a resolved synthesis bug, traces a
+Python/Rust boundary, and prepares a practice review. It does not teach core Rust
+development or a complete transpiler pass. If relevant, inspect a foundation:
 
 - [Lab 01: circuit DAGs and operation selection](../notebooks/01-circuit-dag.ipynb).
 - [Lab 02: an analysis pass and report state](../notebooks/02-analysis-pass.ipynb).
@@ -17,18 +22,20 @@ inspect them and the checks directly. For a usability attempt, try the learner
 exercise first and record whether you consulted hints or the reference. Review
 comments are not treated as an independent learner outcome.
 
-Read the [upstream handoff](upstream.md), [practice-review template](practice-review.md),
-and the planned Lab 03/04 outcomes in the [roadmap](roadmap.md). Those two new labs
-and the expanded mentoring workflow are not implemented yet. The installed lab
-package is not a Qiskit source-build environment.
+Read the [case guide](contribution-case.md), [practice-review template](practice-review.md),
+and [roadmap](roadmap.md). The old Lab 03/04 plan is paused while this direction is
+evaluated. The installed teaching package is not a Qiskit source-build environment.
+No learner outcome for the new walkthrough is claimed. Instructor answers are
+[separate](../notebooks/instructor/00-contribution-workflow-guide.ipynb).
 
 ## Three questions
 
 1. **Accuracy:** Is any contract, example, test, or explanation misleading? Please
    name the file/cell, a counterexample if possible, and the expected behavior.
-2. **Contribution pathway:** What is the most important missing step between
-   these exercises and a useful, appropriately scoped first contribution? What
-   should be removed or simplified for this audience?
+2. **Contribution pathway:** Does the workflow-first case provide useful practice
+   beyond linking CONTRIBUTING.md? Does it accurately distinguish Python API use,
+   Python implementation, and Rust-backed code? What remains before a useful,
+   appropriately scoped contribution, and what should be removed or simplified?
 3. **Overlap and reuse:** Which existing Qiskit resource should this link to
    instead of recreating it? Could you run one exercise from the guide, and what
    would prevent you from doing so?
