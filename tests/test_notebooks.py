@@ -60,7 +60,7 @@ def test_notebook_runs_from_a_clean_kernel(
     output = "".join(item.get("text", "") for item in check.outputs)
     assert f"Acceptance status: {expected_status}" in output, output
     if expected_status == "PASS":
-        expected_count = 14 if "02-" in relative_path else 26
+        expected_count = 14 if "02-" in relative_path else 28
         assert f"{expected_count} passed" in output
     else:
         expected_failure = (
