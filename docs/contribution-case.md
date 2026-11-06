@@ -69,6 +69,12 @@ nonzero control so an always-empty implementation would not satisfy your claim.
 The instructor demonstrates a deterministic single-term control; neither it nor
 these two regressions proves general randomized synthesis correctness.
 
+Instructor/maintainer note: the full project test suite also discovers
+[`test_contribution_case_control.py`](../tests/test_contribution_case_control.py).
+This separate nonzero control automatically rejects an always-empty expansion.
+Keep the historical commands above pointed at the original two-test file and
+let learners design their step-5 control before consulting the reference.
+
 ## Source navigation
 
 Use these pinned files to avoid silently studying a moving version:

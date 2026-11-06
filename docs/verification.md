@@ -3,6 +3,24 @@
 Material version: `contribution-workflow-r1-2026-11-01`.
 The historical two-lab baseline below remains `pilot-revision-1-2026-10-22`.
 
+## External testing fixes — 6 November 2026
+
+[PR #1](https://github.com/92meharali/qiskit-compiler-contribution-lab/pull/1)
+by Rama Chandra M adds two Lab 01 checks with matching wrong-solution cases and
+a separate nonzero QDrift instructor control. Reviewed head:
+`131b3e63d332fc032d42494a928fad8369088e46`; merge: `6d084fc0dda9f19ae3bb2ac94fb0a68b3dc5d71e`.
+
+Independent local verification used Python 3.12.13 and locked Qiskit 2.6.0:
+**41 project tests passed in 58.82 seconds**, including clean-kernel notebook
+execution. Reference checks passed **28 + 14** cases; lint and formatting passed.
+An always-empty QDrift mutation passed the original two historical tests but
+failed the new control. The [host PR CI run](https://github.com/92meharali/qiskit-compiler-contribution-lab/actions/runs/42172570363)
+passed Windows, macOS and Linux after maintainer approval.
+
+These are software checks, not learner results or specialist endorsement. The
+source-development companion remains proposed. Earlier records below retain
+their original counts and dates; no historical learner outcome is rescored.
+
 ## Walkthrough revision 1 — local checks, 1 November 2026
 
 The revision changes instructional text and assessment guidance, not executable

@@ -1,8 +1,12 @@
 # Start with contribution practice
 
-Audience: developers who know Python and basic quantum circuits but are new to
-Qiskit's repository. This is a local practice pathway, not a complete compiler or
-Rust course. It does not generate upstream issues or pull requests.
+Audience: developers who can write Python functions and basic Qiskit circuits
+but have not worked through a source-level contribution. This pathway is intended
+for a facilitated workshop or study group. Its contribution is practice and
+feedback on a concrete case, not another copy of the official instructions.
+It is not a complete compiler or Rust course and does not generate upstream
+issues or pull requests. Keep environment-specific setup in the linked setup
+guide; the workflow below focuses on reasoning and review artifacts.
 
 ## 1. Read the project's rules before choosing a task
 

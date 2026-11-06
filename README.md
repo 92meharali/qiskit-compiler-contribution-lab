@@ -1,8 +1,14 @@
 # Qiskit Compiler Contribution Lab
 
-Guided practice for developers preparing a first useful Qiskit contribution:
-understand the contribution workflow, find implementation and tests, reproduce
-behavior, and explain a bounded change for human review.
+Facilitated practice for developers who know Python and basic Qiskit circuits
+but have not worked through a source-level contribution. Use a resolved case to
+reproduce behavior, find implementation and tests, and explain a regression for
+human review.
+
+The intended setting is a guided workshop or study group. Qiskit's official
+documentation explains the process; this project supplies a case to practise,
+written artifacts and facilitator prompts. It is not a replacement for that
+documentation, an introductory quantum course or a proven self-study curriculum.
 
 This is an independent project by Mehar Ali. It is not
 affiliated with or endorsed by IBM, Qiskit, or Unitary Foundation.
