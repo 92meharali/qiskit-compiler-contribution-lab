@@ -5,7 +5,7 @@ support the optional Python foundations; they are not Qiskit's upstream workflow
 
 ## Notebooks and terminal exercises
 
-The learner and instructor notebooks share checks with the CLI: 26 for Lab 01,
+The learner and instructor notebooks share checks with the CLI: 28 for Lab 01,
 14 for Lab 02. Learner starters deliberately report `NOT YET`. Edit the solution
 cell, rerun it, then rerun the checker. Write your own regression and explanation,
 then restart the kernel and run all cells.

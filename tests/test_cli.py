@@ -158,8 +158,30 @@ def test_explicit_solution_with_spaces_passes(tmp_path):
             "    return [n for n in dag.op_nodes() if isinstance(n.op, types)]",
             "test_invalid_later_type_is_rejected_even_after_a_match",
         ),
+        (
+            "if operation_types is None: return list(dag.op_nodes())\n"
+            "    types = ((operation_types,) if isinstance(operation_types, type) "
+            "else tuple(operation_types))\n"
+            "    return [n for n in dag.op_nodes(include_directives=False) "
+            "if isinstance(n.op, types)]",
+            "test_directives_are_selected_like_other_operations",
+        ),
+        (
+            "if operation_types is None: return list(dag.op_nodes())\n"
+            "    types = ((operation_types,) if isinstance(operation_types, type) "
+            "else tuple(operation_types))\n"
+            "    return [n for n in dag.topological_op_nodes() if isinstance(n.op, types)]",
+            "test_order_follows_op_nodes_across_independent_wires",
+        ),
     ],
-    ids=["consumed-generator", "exact-type", "duplicated-nodes", "lazy-validation"],
+    ids=[
+        "consumed-generator",
+        "exact-type",
+        "duplicated-nodes",
+        "lazy-validation",
+        "skips-directives",
+        "topological-order",
+    ],
 )
 def test_checker_rejects_plausible_wrong_solutions(tmp_path, body, caught_by):
     solution = tmp_path / "wrong.py"

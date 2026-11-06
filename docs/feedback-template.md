@@ -37,7 +37,7 @@ tokens, or unrelated screen contents. Stop recording if consent is withdrawn.
 | Attempted? If not, why, if volunteered? | | |
 | Start/end time | | |
 | Time to first expected checker failure | | |
-| Checks passed at the 40-minute exercise limit | /26 | /14 |
+| Checks passed at the 40-minute exercise limit | /28 | /14 |
 | All checks passed within that window? | | |
 | Extra time and final result, if any | | |
 | Independent or assisted? | | |

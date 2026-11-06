@@ -2,7 +2,7 @@
 
 import pytest
 from qiskit import QuantumCircuit
-from qiskit.circuit import Gate, Instruction, Measure, Reset
+from qiskit.circuit import Barrier, Gate, Instruction, Measure, Reset
 from qiskit.circuit.library import HGate
 from qiskit.converters import circuit_to_dag, dag_to_circuit
 
@@ -152,3 +152,20 @@ def test_no_matching_type_returns_empty_list(select_nodes):
     circuit = QuantumCircuit(1)
     circuit.h(0)
     assert select_nodes(circuit_to_dag(circuit), Measure) == []
+
+
+def test_directives_are_selected_like_other_operations(select_nodes):
+    circuit = QuantumCircuit(1)
+    circuit.h(0)
+    circuit.barrier(0)
+    dag = circuit_to_dag(circuit)
+    assert [node.name for node in select_nodes(dag, Barrier)] == ["barrier"]
+    assert [node.name for node in select_nodes(dag, Instruction)] == ["h", "barrier"]
+
+
+def test_order_follows_op_nodes_across_independent_wires(select_nodes):
+    circuit = QuantumCircuit(2)
+    circuit.h(1)
+    circuit.h(0)
+    dag = circuit_to_dag(circuit)
+    assert select_nodes(dag, HGate) == list(dag.op_nodes())
