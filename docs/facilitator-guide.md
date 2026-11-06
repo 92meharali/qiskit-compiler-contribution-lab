@@ -49,7 +49,7 @@ help during the exercise. Assistance is acceptable; it changes the outcome label
 
 Record these separately:
 
-1. All visible checks pass: 26 for Lab 01, 14 for Lab 02.
+1. All visible checks pass: 28 for Lab 01, 14 for Lab 02.
 2. The learner's own regression fails for an intentional mistake and passes
    after repair; a copied regression is not independent test design.
 3. A fresh example is explained, not merely executed or recalled from the lesson.
