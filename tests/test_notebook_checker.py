@@ -37,7 +37,7 @@ def test_unknown_lab_is_rejected_before_running_a_solution():
 def test_reference_function_passes_the_shared_contract():
     result = check_solution(select_op_nodes)
     assert result.passed, result.output
-    assert "26 passed" in result.output
+    assert "28 passed" in result.output
 
 
 def test_notebook_starter_fails_without_throwing_into_the_kernel():
