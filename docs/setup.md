@@ -21,8 +21,14 @@ uv run jupyter lab notebooks/00-contribution-workflow.ipynb
 
 The project's default dependency groups already include JupyterLab and ipykernel.
 No additional group flag is needed. Use `uv run python`, even if `python` alone is
-not on your PATH. Doctor should report Qiskit 2.6.0 and a successful circuit/DAG
+not on your PATH. Doctor should report Qiskit 2.6.2 and a successful circuit/DAG
 round trip. Record installation errors before attempting the exercise.
+
+The teaching environment uses 2.6.2 for the [Qiskit security fixes](https://github.com/Qiskit/qiskit/releases/tag/2.6.2).
+After updating this repository, run `uv sync --locked` again and restart the
+notebook kernel. The isolated 2.5.2/2.6.0 comparison in the historical walkthrough
+is retained as recorded evidence; use only its trusted, locally constructed circuits
+with those older releases.
 
 To start a foundation lab, use `notebooks/01-circuit-dag.ipynb` or
 `notebooks/02-analysis-pass.ipynb` in the last command. Initial setup needs internet;

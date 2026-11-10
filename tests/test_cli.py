@@ -99,7 +99,7 @@ def test_missing_solution_reports_setup_error_without_traceback(tmp_path):
 def test_doctor_confirms_the_pinned_environment():
     result = run_cli("doctor")
     assert result.returncode == 0, result.stdout + result.stderr
-    assert "Qiskit 2.6.0" in result.stdout
+    assert "Qiskit 2.6.2" in result.stdout
     assert "Circuit/DAG round trip: OK" in result.stdout
 
 

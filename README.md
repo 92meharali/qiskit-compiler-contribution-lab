@@ -44,7 +44,7 @@ uv run jupyter lab notebooks/00-contribution-workflow.ipynb
 ```
 
 Use the project's Python kernel and run cells in order. The locked teaching
-environment uses Python 3.12 and Qiskit 2.6.0. Initial installation needs internet;
+environment uses Python 3.12 and Qiskit 2.6.2. Initial installation needs internet;
 the notebook needs no quantum hardware or cloud account. Troubleshooting and
 kernel selection: [setup checklist](docs/setup.md).
 
