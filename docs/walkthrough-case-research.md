@@ -18,7 +18,7 @@ The task is narrow enough for Python/basic-circuit learners **with a short expla
 | Released Qiskit 2.5.2 | `c1c01ada399af13e495c27b9b22b4ff942bbad7e` | Verified failing released-wheel baseline |
 | Parent immediately before fix | `f6924453021a254624d01a0bedc3b917c3d3ed0c` | Read-only inspection of the precise pre-fix source |
 | Merged fix | `32c1f79e6133d3d0c8c65e9f8e7721038cd24152` | Exact historical change |
-| Released Qiskit 2.6.0 | `65094a013073e4bda53c2b341056ab9ade0eb1bd` | Verified fixed released-wheel target; matches the teaching project's baseline |
+| Released Qiskit 2.6.0 | `65094a013073e4bda53c2b341056ab9ade0eb1bd` | Verified historical fixed released-wheel target; the teaching environment now uses the patched 2.6.2 release |
 
 The release tags are annotated tags; the commits above are the dereferenced commits, not the tag-object IDs. Evidence: [2.5.2 tag object](https://api.github.com/repos/Qiskit/qiskit/git/tags/1c3e6e3514e814a88a187872bbc8aa2c23bbdc8e), [2.6.0 tag object](https://api.github.com/repos/Qiskit/qiskit/git/tags/129637e5494957be48332eb922c397574f8f122b), and [fix commit](https://github.com/Qiskit/qiskit/commit/32c1f79e6133d3d0c8c65e9f8e7721038cd24152).
 

@@ -9,7 +9,7 @@ description = "Independent, test-driven exercises for learning quantum compiler 
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 license = "MIT"
-dependencies = ["qiskit==2.6.0", "pytest>=8.4,<10", "cloudpickle>=3.1,<4"]
+dependencies = ["qiskit==2.6.2", "pytest>=8.4,<10", "cloudpickle>=3.1,<4"]
 
 [project.scripts]
 qclab = "qclab.cli:main"
